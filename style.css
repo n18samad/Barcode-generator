@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef5f7;
+    color: #1f2937;
+    padding: 40px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    text-align: center;
+    color: #1E3A8A;
+    margin-bottom: 35px;
+}
+
+.section {
+    border: 1px solid #d9e3e8;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: #0F766E;
+    margin-bottom: 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #14B8A6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+button {
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:nth-child(1) {
+    background: #14B8A6;
+}
+
+button:nth-child(2) {
+    background: #64748B;
+}
+
+button:nth-child(3) {
+    background: #1E3A8A;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* -------- Labels -------- */
+
+#labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.label {
+    background: white;
+    border: 1px solid #1E3A8A;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label svg {
+    display: block;
+}
+
+.label p {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* -------- Printing -------- */
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    h1,
+    .section,
+    .buttons {
+        display: none;
+    }
+
+    #labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .label {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+}

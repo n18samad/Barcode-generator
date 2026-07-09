@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Label Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JsBarcode -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Barcode Label Generator</h1>
+
+        <!-- Barcode Range -->
+        <div class="section">
+
+            <h2>Barcode Range</h2>
+
+            <div class="grid">
+
+                <div>
+                    <label>Prefix</label>
+                    <input type="text" id="prefix" placeholder="ABC">
+                </div>
+
+                <div>
+                    <label>Start Number</label>
+                    <input type="number" id="start" value="0">
+                </div>
+
+                <div>
+                    <label>End Number</label>
+                    <input type="number" id="end" value="0">
+                </div>
+
+                <div>
+                    <label>Increment</label>
+                    <input type="number" id="step" value="0">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Barcode Settings -->
+
+        <div class="section">
+
+            <h2>Barcode Settings</h2>
+
+            <div class="grid">
+
+                <div>
+                    <label>Bar Thickness (px)</label>
+                    <input type="number" id="barWidth" value="0" step="0.5">
+                </div>
+
+                <div>
+                    <label>Barcode Height (px)</label>
+                    <input type="number" id="barHeight" value="0">
+                </div>
+
+                <div>
+                    <label>Barcode Margin (px)</label>
+                    <input type="number" id="barMargin" value="0">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Label Settings -->
+
+        <div class="section">
+
+            <h2>Label Settings</h2>
+
+            <div class="grid">
+
+                <div>
+                    <label>Padding Around Barcode (px)</label>
+                    <input type="number" id="padding" value="0">
+                </div>
+
+
+                <div>
+                    <label>Border Thickness (px)</label>
+                    <input type="number" id="borderThickness" value="0">
+                </div>
+
+                <div>
+                    <label>Gap Between Labels (px)</label>
+                    <input type="number" id="gap" value="0">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button onclick="generateBarcode()">
+                Generate Labels
+            </button>
+
+            <button onclick="clearLabels()">
+                Clear
+            </button>
+
+            <button onclick="window.print()">
+                Print
+            </button>
+
+        </div>
+
+
+        <!-- Generated Labels -->
+
+        <div id="labels"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
