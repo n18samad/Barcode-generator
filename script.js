@@ -41,7 +41,7 @@ function generateBarcode() {
         label.style.width = labelWidth + "px";
 
         // Border
-        label.style.border = borderThickness + "px solid #1E3A8A";
+        label.style.border = borderThickness + "px solid black";
 
         const svg = document.createElementNS(
             "http://www.w3.org/2000/svg",
