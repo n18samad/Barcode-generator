@@ -181,3 +181,10 @@ button:nth-child(3):hover {
 .hidden-settings {
     display: none !important;
 }
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
+}
