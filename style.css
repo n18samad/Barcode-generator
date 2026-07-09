@@ -158,7 +158,9 @@ button:nth-child(3):hover {
 
     h1,
     .section,
-    .buttons {
+    .buttons,
+    .toggle-btn,
+    footer {
         display: none;
     }
 
