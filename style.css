@@ -169,8 +169,8 @@ button:nth-child(3):hover {
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 5px;
-        padding-left: 30px;
-        padding-top: 15px;
+        padding-left: 45px;
+        padding-top: 17px;
     }
 
     .label {
