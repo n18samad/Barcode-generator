@@ -114,7 +114,7 @@ button:nth-child(3):hover {
 
 .label {
     background: white;
-    border: 1px solid black;
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,7 +132,7 @@ button:nth-child(3):hover {
 .label p {
     margin-top: 0px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: normal;
     text-align: center;
     word-break: break-word;
 }
@@ -141,7 +141,7 @@ button:nth-child(3):hover {
 
     body {
         background: white;
-        padding: 0;
+        padding: 10px;
     }
 
     .container {
@@ -161,6 +161,7 @@ button:nth-child(3):hover {
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 5px;
+        padding-left: 5px;
     }
 
     .label {
