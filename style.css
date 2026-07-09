@@ -139,9 +139,13 @@ button:nth-child(3):hover {
 
 @media print {
 
+    @page {
+        margin: 10mm;
+    }
+
     body {
         background: white;
-        padding: 10px;
+        padding: 20px;
     }
 
     .container {
