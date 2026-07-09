@@ -140,12 +140,14 @@ button:nth-child(3):hover {
 @media print {
 
     @page {
-        margin: 10mm;
+        size: A4;
+        margin: 15mm;
     }
 
     body {
         background: white;
-        padding: 20px;
+        padding: 0;
+        margin: 0;
     }
 
     .container {
@@ -165,7 +167,7 @@ button:nth-child(3):hover {
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 5px;
-        padding-left: 5px;
+        padding: 0;
     }
 
     .label {
