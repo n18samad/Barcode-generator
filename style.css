@@ -102,7 +102,7 @@ button:nth-child(3) {
 }
 
 button:nth-child(3):hover {
-    background: white;
+    background: rgb(44, 61, 110);
 }
 
 #labels {
