@@ -49,55 +49,68 @@
 
         </div>
 
-        <!-- Barcode Settings -->
+        <!-- Advanced Settings Button -->
 
-        <div class="section hidden-settings">
+        <button class="toggle-btn" id="toggleSettings" onclick="toggleSettings()">
+            ▼ Advanced Settings
+        </button>
 
-            <h2>Barcode Settings</h2>
+        <!-- Advanced Settings -->
 
-            <div class="grid">
+        <div id="advancedSettings" class="hidden-settings">
 
-                <div>
-                    <label>Bar Thickness (px)</label>
-                    <input type="number" id="barWidth" value="1" step="0.1">
-                </div>
+            <!-- Barcode Settings -->
 
-                <div>
-                    <label>Barcode Height (px)</label>
-                    <input type="number" id="barHeight" value="36">
-                </div>
+            <div class="section">
 
-                <div>
-                    <label>Barcode Margin (px)</label>
-                    <input type="number" id="barMargin" value="1">
+                <h2>Barcode Settings</h2>
+
+                <div class="grid">
+
+                    <div>
+                        <label>Bar Thickness (px)</label>
+                        <input type="number" id="barWidth" value="1" step="0.1">
+                    </div>
+
+                    <div>
+                        <label>Barcode Height (px)</label>
+                        <input type="number" id="barHeight" value="36">
+                    </div>
+
+                    <div>
+                        <label>Barcode Margin (px)</label>
+                        <input type="number" id="barMargin" value="1">
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <!-- Label Settings -->
 
-        <!-- Label Settings -->
+            <div class="section">
 
-        <div class="section hidden-settings">
+                <h2>Label Settings</h2>
 
-            <h2>Label Settings</h2>
+                <div class="grid">
 
-            <div class="grid">
+                    <div>
+                        <label>Label Size (px)</label>
+                        <input type="number" id="labelSize" value="150">
+                    </div>
 
-                <div>
-                    <label>Label Width (px)</label>
-                    <input type="number" id="labelWidth" value="150">
+                    <div>
+                        <label>Border Thickness (px)</label>
+                        <input type="number" id="borderThickness" value="1">
+                    </div>
+
+                    <div>
+                        <label>Gap Between Labels (px)</label>
+                        <input type="number" id="gap" value="0">
+                    </div>
+
                 </div>
 
-                <div>
-                    <label>Border Thickness (px)</label>
-                    <input type="number" id="borderThickness" value="1">
-                </div>
-
-                <div>
-                    <label>Gap Between Labels (px)</label>
-                    <input type="number" id="gap" value="0">
-                </div>
             </div>
 
         </div>
@@ -123,6 +136,10 @@
         <!-- Generated Labels -->
 
         <div id="labels"></div>
+
+        <footer>
+            Built by Nayab Samad
+        </footer>
 
     </div>
 

@@ -9,7 +9,7 @@ function generateBarcode() {
     const barHeight = parseInt(document.getElementById("barHeight").value);
     const barMargin = parseInt(document.getElementById("barMargin").value);
 
-    const labelWidth = parseFloat(document.getElementById("labelWidth").value);
+    const labelSize = parseFloat(document.getElementById("labelSize").value);
 
     const borderThickness = parseInt(document.getElementById("borderThickness").value);
     const gap = parseInt(document.getElementById("gap").value);
@@ -37,8 +37,8 @@ function generateBarcode() {
         const label = document.createElement("div");
         label.className = "label";
 
-        // Set label width (px)
-        label.style.width = labelWidth + "px";
+        // Set label size (px)
+        label.style.size = labelSize + "px";
 
         // Border
         label.style.border = `${borderThickness}px solid #000`;
@@ -77,4 +77,19 @@ function generateBarcode() {
 
 function clearLabels() {
     document.getElementById("labels").innerHTML = "";
+}
+
+function toggleSettings() {
+
+    const settings = document.getElementById("advancedSettings");
+    const button = document.getElementById("toggleSettings");
+
+    if (settings.classList.contains("hidden-settings")) {
+        settings.classList.remove("hidden-settings");
+        button.textContent = "▲ Hide Advanced Settings";
+    } else {
+        settings.classList.add("hidden-settings");
+        button.textContent = "▼ Advanced Settings";
+    }
+
 }

@@ -98,11 +98,11 @@ button:nth-child(2):hover {
 }
 
 button:nth-child(3) {
-    background: #1E3A8A;
+    background: rgb(44, 61, 110);
 }
 
 button:nth-child(3):hover {
-    background: #1E40AF;
+    background: white;
 }
 
 #labels {
@@ -187,4 +187,20 @@ footer {
     margin-top: 30px;
     font-size: 12px;
     color: #666;
+}
+
+.toggle-btn {
+    background: none !important;
+    border: none;
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+.toggle-btn:hover {
+    color: #4c4c4c;
 }
