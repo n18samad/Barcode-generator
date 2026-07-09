@@ -34,6 +34,7 @@ h1 {
 .section h2 {
     color: #0F766E;
     margin-bottom: 18px;
+    font-size: 20px;
 }
 
 .grid {
@@ -46,6 +47,7 @@ label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
+    color: #374151;
 }
 
 input {
@@ -53,6 +55,7 @@ input {
     padding: 10px;
     border: 1px solid #cbd5e1;
     font-size: 15px;
+    border-radius: 4px;
 }
 
 input:focus {
@@ -65,34 +68,42 @@ input:focus {
     justify-content: center;
     gap: 15px;
     margin: 35px 0;
+    flex-wrap: wrap;
 }
 
 button {
-    border: none;
     padding: 12px 24px;
-    color: white;
+    border: none;
     cursor: pointer;
+    color: white;
     font-size: 16px;
     font-weight: bold;
+    transition: 0.25s;
 }
 
 button:nth-child(1) {
     background: #14B8A6;
 }
 
+button:nth-child(1):hover {
+    background: #0F766E;
+}
+
 button:nth-child(2) {
     background: #64748B;
+}
+
+button:nth-child(2):hover {
+    background: #475569;
 }
 
 button:nth-child(3) {
     background: #1E3A8A;
 }
 
-button:hover {
-    opacity: 0.9;
+button:nth-child(3):hover {
+    background: #1E40AF;
 }
-
-/* -------- Labels -------- */
 
 #labels {
     display: flex;
@@ -104,25 +115,27 @@ button:hover {
 .label {
     background: white;
     border: 1px solid #1E3A8A;
-    padding: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 6px;
 }
 
 .label svg {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .label p {
-    margin-top: 5px;
+    margin-top: 0px;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
+    word-break: break-word;
 }
-
-/* -------- Printing -------- */
 
 @media print {
 
@@ -134,6 +147,7 @@ button:hover {
     .container {
         box-shadow: none;
         padding: 0;
+        max-width: none;
     }
 
     h1,
@@ -145,6 +159,7 @@ button:hover {
     #labels {
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
         gap: 5px;
     }
 

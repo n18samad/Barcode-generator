@@ -9,9 +9,10 @@ function generateBarcode() {
     const barHeight = parseInt(document.getElementById("barHeight").value);
     const barMargin = parseInt(document.getElementById("barMargin").value);
 
+    const labelWidth = parseFloat(document.getElementById("labelWidth").value);
+
     const borderThickness = parseInt(document.getElementById("borderThickness").value);
     const gap = parseInt(document.getElementById("gap").value);
-    const padding = parseInt(document.getElementById("padding").value);
 
     const labels = document.getElementById("labels");
 
@@ -36,8 +37,11 @@ function generateBarcode() {
         const label = document.createElement("div");
         label.className = "label";
 
+        // Set label width (px)
+        label.style.width = labelWidth + "px";
+
+        // Border
         label.style.border = borderThickness + "px solid #1E3A8A";
-        label.style.padding = padding + "px";
 
         const svg = document.createElementNS(
             "http://www.w3.org/2000/svg",
@@ -60,12 +64,15 @@ function generateBarcode() {
             displayValue: false
         });
 
-        // Automatically size the label to fit the barcode
-        const rect = svg.getBoundingClientRect();
+        requestAnimationFrame(() => {
+            const barcodeHeight = svg.getBoundingClientRect().height;
+            const textHeight = text.getBoundingClientRect().height;
 
-        label.style.width = (rect.width + padding * 2) + "px";
-        label.style.height = (rect.height + padding * 2 + text.offsetHeight + 10) + "px";
+            label.style.height = (barcodeHeight + textHeight + 20) + "px";
+        });
+
     }
+
 }
 
 function clearLabels() {
