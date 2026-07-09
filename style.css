@@ -98,11 +98,11 @@ button:nth-child(2):hover {
 }
 
 button:nth-child(3) {
-    background: rgb(44, 61, 110);
+    background: #2563EB;
 }
 
 button:nth-child(3):hover {
-    background: rgb(44, 61, 110);
+    background: #1d4ed8;
 }
 
 #labels {
