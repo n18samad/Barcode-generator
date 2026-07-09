@@ -174,3 +174,7 @@ button:nth-child(3):hover {
     }
 
 }
+
+.hidden-settings {
+    display: none !important;
+}
